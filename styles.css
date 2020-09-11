@@ -1,0 +1,143 @@
+body, html {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: skyblue;
+}
+.header {
+  padding: 0 0 0 20px;
+  background: white;
+  height: 5%;
+  overflow: hidden;
+  background-color:skyblue;
+}
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 10%;
+    bottom: 0; 
+    }
+#name{
+  float: left;
+  width: 10%;
+  font-style: oblique;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 25px;
+  position: relative;
+  overflow: hidden;
+}
+    #logo{
+  float: left;
+  width: 15%;
+    }   
+#search{
+  float: right;
+  width:75%;
+  overflow: hidden;
+} 
+#search-input{
+  width: 30%;
+  margin-left: 20%;
+  border-radius: 5px;
+  position: absolute;
+  height: 25px;
+}
+#search-btn{
+  margin-left: 75%; 
+  height: 25px; 
+}
+#tabs{
+  height: 2%;
+  margin-bottom: 50px;
+}
+#weather {
+  background-color: #aaa;
+  width: inherit;
+  padding: 20px;
+  margin-right: 5%;
+  margin-left: 5%;
+  height:inherit;
+  margin-top: 0;
+  font-size:25px;
+
+}
+#weather img{
+  width:80px;
+  height:80px;
+  padding:0px;
+  float: left;
+  
+} 
+#tabs button{
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: transparent;
+  width: 33%;
+  cursor: pointer;
+}
+button.links :hover {
+  background-color: #777;
+}
+@media screen and (max-width: 800px) {
+  .header {   
+    width: 100%;
+    padding: 0;
+  }
+  #name{
+    font-size: 15px; 
+    width: 10%;
+  }
+  #logo img{
+    float: left;
+    width: 50px;
+      }
+}
+@media screen and (max-width: 400px) {
+  #weather {
+    background-color: #aaa;
+    width: 60%;
+    margin-left: 5%;
+    height:70px;
+    margin-top: 70px;
+    font-size:10px;
+      }
+      #weather img{
+        width:50px;
+        height:50px;
+        
+      }   
+      #name{
+        font-size: 9px; 
+        width: 20%;
+      } 
+      #logo img{
+        width: 30px;
+        padding:0;
+          }
+          #search{
+            width:60%;
+          } 
+          #search-input{
+            font-size: 10px;
+            height: 20px;
+           margin-left:0 ;
+          }
+          #search-btn{
+            height: 20px;
+            font-size: 10px;
+            margin-left:60% ; 
+          }      
+          #tabs button{
+            font-size: 10px;            
+                      }
+          .footer {
+            font-size: 10px; 
+            margin-top: 20%;
+          }
+
+    }
+
+

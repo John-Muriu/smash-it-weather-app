@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>MY Weather forecast</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+    <!-- App icons-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="/styles.css" rel="stylesheet" />
+    <script src="/script.js"></script>
+</head>
+
+<body onload="getCurrentLocation('hourly,daily,minutely');">
+    <div class="header">`
+        <p id="name">Smash It <br /> Forecast</p>
+        <div id="logo"><a href="www.flaticon.com"><img src="icons/favicon-96x96.png" alt="Made by Freepik" /></a></div>
+
+        <div id="search">
+            <input type="text" id="search-input" placeholder="Type a city ....." onclick="getLocation();  store();" />
+            <button id="search-btn" type="submit">search</button>
+
+        </div>
+    </div>
+    <div id="tabs">
+        <button class="links" onclick="choosePart(event, 'current')">Current Forecast</button>
+        <button class="links" onclick="choosePart(event, 'hourly')">Hourly Forecast</button>
+        <button class="links" onclick="choosePart(event, 'daily')">Daily Forecast</button>
+    </div>
+    <div id="weather">
+    </div>
+
+    <div class="footer">
+        <p>Weather forecast APP 2020 created and maintained by <a href="https://github.com/SeR4h">Nakyembe Sarah</a>
+            using info from <a href="http://www.openweathermap.org">the Open Weather API</a>.</p>
+    </div>
+    <script type="text/javascript">
+        if (navigator.serviceWorker.controller) {
+            console.log("Active service worker found,no need to register");
+        } else {
+            navigator.serviceWorker.register("service-worker.js", {
+                scope: "./"
+            }).then(function (register) {
+                console.log("Service worker registered for scope" + register.scope);
+            })
+        }
+
+        function store() {
+            var cityname = document.getElementById("search-input").value;
+            var key = cityname + " City";
+            var storedValue = localStorage.getItem(key);
+            if (storedValue) {
+                cityname = storedValue;
+            }
+            localStorage.setItem(key, cityname);
+        }
+
+
+    </script>
+</body>
+
+</html>

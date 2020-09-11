@@ -1,0 +1,23 @@
+{
+  "name": "smashitweatherforecast",
+  "version": "1.0.0",
+  "description": "weather forecast app",
+  "main": "script.js",
+  "scripts": {
+    "start": "lite-server",
+    "test": "run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeR4h/weather-forecast-app.git"
+  },
+  "author": "Nakyembe Sarah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeR4h/weather-forecast-app/issues"
+  },
+  "homepage": "https://github.com/SeR4h/weather-forecast-app#readme",
+  "dependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
