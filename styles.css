@@ -14,8 +14,8 @@ body, html {
     padding: 20px;
     text-align: center;
     background: #ddd;
-    margin-top: 10%;
-    bottom: 0; 
+    margin-top: 100%;
+    bottom: 0%;
     }
 #name{
   float: left;
@@ -88,30 +88,47 @@ button.links :hover {
   }
   #name{
     font-size: 15px; 
-    width: 10%;
+    width: 15%;
+    padding-left: 10px;
   }
   #logo img{
     float: left;
     width: 50px;
       }
+      .footer {
+        font-size: 15px; 
+        margin-top: 100%;
+      }
+      #weather {
+        width: inherit;
+        height:inherit;
+          }
+          #logo{
+            float: left;
+            width: 10%;
+              } 
+          #search{
+            padding-top: 10px;
+            width:70%;
+          }    
 }
 @media screen and (max-width: 400px) {
   #weather {
     background-color: #aaa;
-    width: 60%;
+    width: inherit;
     margin-left: 5%;
-    height:70px;
+    height:inherit;
     margin-top: 70px;
     font-size:10px;
       }
       #weather img{
         width:50px;
         height:50px;
-        
       }   
       #name{
-        font-size: 9px; 
+        font-size: 11px; 
         width: 20%;
+        padding-left:10px;
       } 
       #logo img{
         width: 30px;
@@ -127,15 +144,15 @@ button.links :hover {
           }
           #search-btn{
             height: 20px;
-            font-size: 10px;
+            font-size: 11px;
             margin-left:60% ; 
           }      
           #tabs button{
-            font-size: 10px;            
+            font-size: 11px;            
                       }
           .footer {
             font-size: 10px; 
-            margin-top: 20%;
+            margin-top: 100%;
           }
 
     }

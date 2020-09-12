@@ -8,7 +8,9 @@ function getWeather(coord, part) {
             appendHourlyData(data);
         } else if (part === 'hourly,minutely,current') {
             appendDailyData(data);
-        } else {
+        }  else if (part === 'hourly,daily,minutely'){
+            displayCurrent(data);
+        }else {
             displayCurrent(data);
         }
     })
