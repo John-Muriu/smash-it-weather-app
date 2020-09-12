@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SeR4h/weather-forecast-app.git"
+    "url": "git+https://github.com/SeR4h/smash-it-weather-app.git"
   },
   "author": "Nakyembe Sarah",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SeR4h/weather-forecast-app/issues"
+    "url": "https://github.com/SeR4h/smash-it-weather-app/issues"
   },
-  "homepage": "https://github.com/SeR4h/weather-forecast-app#readme",
+  "homepage": "https://github.com/SeR4h/smash-it-weather-app#readme",
   "dependencies": {
     "lite-server": "^2.5.4"
   }
